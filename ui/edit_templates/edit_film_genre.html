@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KinoLab - Администрирование</title>
+        <link rel="icon" type="image/x-icon" href="/img/logo/logo.ico" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <script defer src="/js/chooseFile.js"></script>
+    </head>
+    <body>
+        
+        {{ template "header.html" }}
+
+        <form action="" method="POST" class="fields__wrapper">
+
+
+            <div class="field">
+                <p class="field__title">ID Фильма</p>
+                <input name="filmID" type="text" class="input" autocomplete="off">
+            </div>
+            
+            <div class="field">
+                <p class="field__title">ID Жанра</p>
+                <input name="genreID" type="text" class="input" autocomplete="off">
+            </div>
+
+
+            <div class="edit__btns">
+                <button class="btn delete__btn">Удалить</button>
+                <button class="btn save__btn">Сохранить</button>
+            </div>
+
+            
+        </form>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KinoLab - Администрирование</title>
+        <link rel="icon" type="image/x-icon" href="/img/logo/logo.ico" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <script defer src="/js/request_page.js"></script>
+    </head>
+    <body>
+        
+        {{ template "header.html" }}
+
+        <main class="content">
+
+
+            <section class="tables__wrapper">
+                <div class="tables__title"><h2>Таблицы</h2></div>
+                <ul class="tables">
+
+                    {{ range .Tables }}
+                    <li class="table">
+                        <a href="/table/{{.}}">{{.}}</a>
+                    </li>
+                    {{ end }}
+
+                </ul>
+            </section>
+
+
+            <section class="objects">
+
+            </section>
+
+        </main>
+    </body>
+</html>
+
+<!-- 
+Выбрать все
+сделать страницы внизу
+ -->

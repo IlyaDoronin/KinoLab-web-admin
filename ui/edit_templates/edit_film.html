@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KinoLab - Администрирование</title>
+        <link rel="icon" type="image/x-icon" href="/img/logo/logo.ico" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <script defer src="/js/chooseFile.js"></script>
+    </head>
+    <body>
+        
+        {{ template "header.html" }}
+
+        <form action="" method="POST" class="fields__wrapper">
+
+            
+            <div class="field">
+                <p class="field__title">Название фильма</p>
+                <input name="title" type="text" class="input" autocomplete="off">
+            </div>
+            
+            <div class="field">
+                <p class="field__title">Дата выхода фильма (MM/DD/YYYY)</p>
+                <input name="date" type="text" class="input" autocomplete="off">
+            </div>
+            
+            <div class="field">
+                <p class="field__title">Бюджет фильма в долларах ($)</p>
+                <input name="budget" type="text" class="input" autocomplete="off">
+            </div>
+
+            <div class="field">
+                <p class="field__title">Описание фильма</p>
+                <textarea type="text" name="text" class="textarea"></textarea>
+            </div>
+
+            <div class="field">
+                <p class="field__title">Выбор фильма</p>
+                <div class="choose__btn" id="film__btn">
+                    <p>Выбрать фильм</p>
+                    <input name="film" type="file" class="choose__file" id="film__file">
+                </div>
+                <span class="choose__title" id="film__title">film_1.jpg</span>
+            </div>
+            
+            <div class="field">
+                <p class="field__title">Выбор постера</p>
+                <div class="choose__btn" id="poster__btn">
+                    <p>Выбрать постер</p>
+                    <input name="poster" type="file" class="choose__file" id="poster__file">
+                </div>
+                <span class="choose__title" id="poster__title">poster_1.png</span>
+            </div>
+            
+            <div class="field">
+                <p class="field__title">Выбор баннера</p>
+                <div class="choose__btn" id="banner__btn">
+                    <p>Выбрать баннер</p>
+                    <input name="banner" type="file" class="choose__file" id="banner__file">
+                </div>
+                <span class="choose__title" id="banner__title">banner_1.jpg</span>
+            </div>
+
+
+            <div class="edit__btns">
+                <button class="btn delete__btn">Удалить</button>
+                <button class="btn save__btn">Сохранить</button>
+            </div>
+
+
+        </form>
+    </body>
+</html>
