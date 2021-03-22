@@ -36,7 +36,7 @@
 
                         {{ range .Objects }}
                         <li class="objects__item" >
-                            <a href="/edit/{{ .Table }}" class="object"><p>{{ .Title }}</p></a>
+                            <a href="/edit/{{ .Table }}?id={{ .ID }}" class="object"><p>{{ .Title }}</p></a>
                         </li>
                         {{ end }}
                         

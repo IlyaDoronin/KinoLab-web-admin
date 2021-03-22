@@ -17,12 +17,12 @@
 
             <div class="field">
                 <p class="field__title">Фамилия актёра</p>
-                <input name="lname" type="text" class="input" autocomplete="off">
+                <input name="lname" type="text" value="{{.Actor.LName}}" class="input" autocomplete="off">
             </div>
             
             <div class="field">
                 <p class="field__title">Имя актёра</p>
-                <input name="fname" type="text" class="input" autocomplete="off">
+                <input name="fname" type="text" value="{{.Actor.FName}}" class="input" autocomplete="off">
             </div>
 
 
@@ -31,6 +31,9 @@
                 <button class="btn save__btn">Сохранить</button>
             </div>
 
+            <script>
+                const HOST = "{{.Host}}:{{.Port}}"
+            </script>
             
         </form>
     </body>

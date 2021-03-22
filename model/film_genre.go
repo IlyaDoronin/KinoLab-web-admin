@@ -46,7 +46,7 @@ func (fg FilmGenre) GetPageElements(page int) map[string][]FilmGenre {
 	json.NewDecoder(r.Body).Decode(&films_genres)
 
 	for i := 0; i < len(films_genres["films_genres"]); i++ {
-		films_genres["films_genres"][i].Table = "films_genres"
+		films_genres["films_genres"][i].Table = "film_genre"
 		films_genres["films_genres"][i].Title = fmt.Sprintf("%s film(%s) id(%d)",
 			films_genres["films_genres"][i].GenreName,
 			films_genres["films_genres"][i].FilmName,

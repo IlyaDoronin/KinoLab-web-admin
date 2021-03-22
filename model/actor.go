@@ -44,7 +44,7 @@ func (ac *Actor) GetPageElements(page int) map[string][]Actor {
 	json.NewDecoder(r.Body).Decode(&actors)
 
 	for i := 0; i < len(actors["actors"]); i++ {
-		actors["actors"][i].Table = "actors"
+		actors["actors"][i].Table = "actor"
 		actors["actors"][i].Title = fmt.Sprintf("%s %s id(%d)", actors["actors"][i].LName, actors["actors"][i].FName, actors["actors"][i].ID)
 	}
 
@@ -64,7 +64,7 @@ func (ac *Actor) GetAll() map[string][]Actor {
 	json.NewDecoder(r.Body).Decode(&actors)
 
 	for i := 0; i < len(actors["actors"]); i++ {
-		actors["actors"][i].Table = "actors"
+		actors["actors"][i].Table = "actor"
 		actors["actors"][i].Title = fmt.Sprintf("%s %s id(%d)", actors["actors"][i].LName, actors["actors"][i].FName, actors["actors"][i].ID)
 	}
 

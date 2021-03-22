@@ -16,13 +16,13 @@
 
 
             <div class="field">
-                <p class="field__title">ID Фильма</p>
-                <input name="filmID" type="text" class="input" autocomplete="off">
+                <p class="field__title">ID Фильма ({{.FilmGenre.FilmName}})</p>
+                <input name="filmID" type="text" value="{{.FilmGenre.FilmID}}" class="input" autocomplete="off">
             </div>
             
             <div class="field">
-                <p class="field__title">ID Жанра</p>
-                <input name="genreID" type="text" class="input" autocomplete="off">
+                <p class="field__title">ID Жанра ({{.FilmGenre.GenreName}})</p>
+                <input name="genreID" type="text" value="{{.FilmGenre.GenreID}}" class="input" autocomplete="off">
             </div>
 
 
@@ -31,6 +31,9 @@
                 <button class="btn save__btn">Сохранить</button>
             </div>
 
+            <script>
+                const HOST = "{{.Host}}:{{.Port}}"
+            </script>
             
         </form>
     </body>

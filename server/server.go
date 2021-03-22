@@ -18,17 +18,17 @@ func Start() {
 
 	r.GET("/", index)
 
-	// editGroup := r.Group("/edit")
-	// {
-	// 	editGroup.GET("/author")
-	// 	editGroup.GET("/actor")
-	// 	editGroup.GET("/film")
-	// 	editGroup.GET("/genre")
-	// 	editGroup.GET("/film_genre")
-	// 	editGroup.GET("/film_author")
-	// 	editGroup.GET("/film_actor")
-	// 	editGroup.GET("/film_comment")
-	// }
+	editGroup := r.Group("/edit")
+	{
+		editGroup.GET("/author", editAuthorObjects)
+		editGroup.GET("/actor", editActorObjects)
+		editGroup.GET("/film", editFilmObjects)
+		editGroup.GET("/genre", editGenreObjects)
+		editGroup.GET("/film_genre", editFilmGenreObjects)
+		editGroup.GET("/film_author", editFilmAuthorObjects)
+		editGroup.GET("/film_actor", editFilmActorObjects)
+		editGroup.GET("/film_comment", editFilmCommentObjects)
+	}
 
 	objectsGroup := r.Group("/table")
 	{

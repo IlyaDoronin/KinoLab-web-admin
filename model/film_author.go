@@ -46,7 +46,7 @@ func (f_au FilmAuthor) GetPageElements(page int) map[string][]FilmAuthor {
 	json.NewDecoder(r.Body).Decode(&films_authors)
 
 	for i := 0; i < len(films_authors["films_authors"]); i++ {
-		films_authors["films_authors"][i].Table = "films_authors"
+		films_authors["films_authors"][i].Table = "film_author"
 		films_authors["films_authors"][i].Title = fmt.Sprintf("%s film(%s) id(%d)",
 			films_authors["films_authors"][i].AuthorName,
 			films_authors["films_authors"][i].FilmName,

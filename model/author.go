@@ -45,7 +45,7 @@ func (au *Author) GetPageElements(page int) map[string][]Author {
 	json.NewDecoder(r.Body).Decode(&authors)
 
 	for i := 0; i < len(authors["authors"]); i++ {
-		authors["authors"][i].Table = "authors"
+		authors["authors"][i].Table = "author"
 		authors["authors"][i].Title = fmt.Sprintf("%s %s id(%d)", authors["authors"][i].LName, authors["authors"][i].FName, authors["authors"][i].ID)
 	}
 

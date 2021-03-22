@@ -46,7 +46,7 @@ func (f_au FilmComments) GetPageElements(page int) map[string][]FilmComments {
 	json.NewDecoder(r.Body).Decode(&film_comments)
 
 	for i := 0; i < len(film_comments["film_comments"]); i++ {
-		film_comments["film_comments"][i].Table = "film_comments"
+		film_comments["film_comments"][i].Table = "film_comment"
 		film_comments["film_comments"][i].Title = fmt.Sprintf("%s film_id(%d) id(%d)",
 			film_comments["film_comments"][i].Name,
 			film_comments["film_comments"][i].FilmID,

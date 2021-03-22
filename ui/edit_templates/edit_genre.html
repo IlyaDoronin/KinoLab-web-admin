@@ -16,7 +16,7 @@
             
             <div class="field">
                 <p class="field__title">Название жанра</p>
-                <input name="genreName" type="text" class="input" autocomplete="off">
+                <input name="genreName" type="text" value="{{ .Genre.GenreName }}" class="input" autocomplete="off">
             </div>
 
             <div class="edit__btns">
@@ -24,6 +24,9 @@
                 <button class="btn save__btn">Сохранить</button>
             </div>
 
+            <script>
+                const HOST = "{{.Host}}:{{.Port}}"
+            </script>
             
         </form>
     </body>

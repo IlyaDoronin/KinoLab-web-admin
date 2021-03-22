@@ -13,7 +13,7 @@ type Film struct {
 	FilmName    string
 	Description string
 	FilmYear    string
-	Budget      float32
+	Budget      int
 	FileURL     string
 	PosterURL   string
 	BannerURL   string
