@@ -3,6 +3,7 @@ package server
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/yeahyeahcore/KinoLab-web-admin/model"
+	"github.com/yeahyeahcore/KinoLab-web-admin/conf"
 )
 
 func getFilmObjects(c *gin.Context) {
@@ -14,6 +15,8 @@ func getFilmObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": films["films"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }
 
@@ -26,6 +29,8 @@ func getAuthorObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": authors["authors"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }
 
@@ -38,6 +43,8 @@ func getActorObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": actors["actors"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }
 
@@ -50,6 +57,8 @@ func getGenreObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": genres["genres"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }
 
@@ -62,6 +71,8 @@ func getFilmCommentObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": film_comments["film_comments"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }
 
@@ -74,6 +85,8 @@ func getFilmActorObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": films_actors["films_actors"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }
 
@@ -86,6 +99,8 @@ func getFilmAuthorObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": films_authors["films_authors"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }
 
@@ -98,5 +113,7 @@ func getFilmGenreObjects(c *gin.Context) {
 		"Tables":  tables["tables"],
 		"Objects": films_genres["films_genres"],
 		"Pages":   pageCount["page_count"],
+		"Host": conf.Api.Host,
+		"Port": conf.Api.Port,
 	})
 }

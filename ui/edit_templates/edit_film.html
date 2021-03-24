@@ -6,7 +6,9 @@
         <title>KinoLab - Администрирование</title>
         <link rel="icon" type="image/x-icon" href="/img/logo/logo.ico" />
         <link rel="stylesheet" href="/css/styles.css" />
+        <script defer src="/js/upload_file.js"></script>
         <script defer src="/js/chooseFile.js"></script>
+        <script defer src="/js/delete_general.js"></script>    
     </head>
     <body>
         
@@ -42,6 +44,10 @@
                     <input name="film" type="file" class="choose__file" id="film__file">
                 </div>
                 <span class="choose__title" id="film__title">{{ .Film.FileURL }}</span>
+                <div id="progress_film">
+                    <div class="progress"></div>
+                    <p>0%</p>
+                </div>
             </div>
             
             <div class="field">
@@ -51,6 +57,10 @@
                     <input name="poster" type="file" class="choose__file" id="poster__file">
                 </div>
                 <span class="choose__title" id="poster__title">{{ .Film.PosterURL }}</span>
+                <div id="progress_poster">
+                    <div class="progress"></div>
+                    <p>0%</p>
+                </div>
             </div>
             
             <div class="field">
@@ -60,6 +70,10 @@
                     <input name="banner" type="file" class="choose__file" id="banner__file">
                 </div>
                 <span class="choose__title" id="banner__title">{{ .Film.BannerURL }}</span>
+                <div id="progress_banner">
+                    <div class="progress"></div>
+                    <p>0%</p>
+                </div>
             </div>
 
 

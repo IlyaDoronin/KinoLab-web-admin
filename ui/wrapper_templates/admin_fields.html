@@ -6,8 +6,8 @@
         <title>KinoLab - Администрирование</title>
         <link rel="icon" type="image/x-icon" href="/img/logo/logo.ico" />
         <link rel="stylesheet" href="/css/styles.css" />
-        <script defer src="/js/request_page.js"></script>
         <script defer src="/js/provider.js"></script>
+        <script defer src="/js/load_page.js"></script>
     </head>
     <body>
         
@@ -35,9 +35,9 @@
                     <ul class="objects__items">
 
                         {{ range .Objects }}
-                        <li class="objects__item" >
-                            <a href="/edit/{{ .Table }}?id={{ .ID }}" class="object"><p>{{ .Title }}</p></a>
-                        </li>
+                            <li class="objects__item" >
+                                <a href="/edit/{{ .Table }}?id={{ .ID }}" class="object"><p>{{ .Title }}</p></a>
+                            </li>
                         {{ end }}
                         
                     </ul>
