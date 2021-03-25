@@ -9,6 +9,7 @@
         <script defer src="/js/upload_file.js"></script>
         <script defer src="/js/chooseFile.js"></script>
         <script defer src="/js/delete_general.js"></script>    
+        <script defer src="/js/patch_general.js"></script>     
     </head>
     <body>
         
@@ -19,12 +20,12 @@
             
             <div class="field">
                 <p class="field__title">Название фильма</p>
-                <input name="title" type="text" value="{{ .Film.FilmName }}" class="input" autocomplete="off">
+                <input name="filmName" type="text" value="{{ .Film.FilmName }}" class="input" autocomplete="off">
             </div>
             
             <div class="field">
                 <p class="field__title">Дата выхода фильма (MM/DD/YYYY)</p>
-                <input name="date" type="text" value="{{ .Film.FilmYear }}" class="input" autocomplete="off">
+                <input name="filmYear" type="text" value="{{ .Film.FilmYear }}" class="input" autocomplete="off">
             </div>
             
             <div class="field">
@@ -34,14 +35,14 @@
 
             <div class="field">
                 <p class="field__title">Описание фильма</p>
-                <textarea type="text" name="text" class="textarea">{{ .Film.Description }}</textarea>
+                <textarea type="text" name="description" class="textarea">{{ .Film.Description }}</textarea>
             </div>
 
             <div class="field">
                 <p class="field__title">Выбор фильма</p>
                 <div class="choose__btn" id="film__btn">
                     <p>Выбрать фильм</p>
-                    <input name="film" type="file" class="choose__file" id="film__file">
+                    <input name="filmFile" type="file" class="choose__file" id="film__file">
                 </div>
                 <span class="choose__title" id="film__title">{{ .Film.FileURL }}</span>
                 <div id="progress_film">
@@ -54,7 +55,7 @@
                 <p class="field__title">Выбор постера</p>
                 <div class="choose__btn" id="poster__btn">
                     <p>Выбрать постер</p>
-                    <input name="poster" type="file" class="choose__file" id="poster__file">
+                    <input name="posterFile" type="file" class="choose__file" id="poster__file">
                 </div>
                 <span class="choose__title" id="poster__title">{{ .Film.PosterURL }}</span>
                 <div id="progress_poster">
@@ -67,7 +68,7 @@
                 <p class="field__title">Выбор баннера</p>
                 <div class="choose__btn" id="banner__btn">
                     <p>Выбрать баннер</p>
-                    <input name="banner" type="file" class="choose__file" id="banner__file">
+                    <input name="bannerFile" type="file" class="choose__file" id="banner__file">
                 </div>
                 <span class="choose__title" id="banner__title">{{ .Film.BannerURL }}</span>
                 <div id="progress_banner">
