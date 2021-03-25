@@ -6,10 +6,11 @@
         <title>KinoLab - Администрирование</title>
         <link rel="icon" type="image/x-icon" href="/img/logo/logo.ico" />
         <link rel="stylesheet" href="/css/styles.css" />
+        <script defer src="/js/load.js"></script>
         <script defer src="/js/upload_file.js"></script>
         <script defer src="/js/chooseFile.js"></script>
         <script defer src="/js/delete_general.js"></script>    
-        <script defer src="/js/patch_general.js"></script>     
+        <script defer src="/js/patch_film.js"></script>     
     </head>
     <body>
         
@@ -83,6 +84,18 @@
                 <button class="btn save__btn">Сохранить</button>
             </div>
 
+            <div class="loading">
+                <svg class="spinner" viewBox="0 0 50 50">
+                    <circle
+                        class="path"
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="none"
+                        stroke-width="5"
+                    ></circle>
+                </svg>
+            </div>
             <script>
                 const HOST = "{{.Host}}:{{.Port}}"
             </script>

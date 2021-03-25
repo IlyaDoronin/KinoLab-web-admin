@@ -8,10 +8,14 @@ const url = `http://${HOST}/post/update/${table}`
 
 // Ajax запрос
 function patchRecord(data){   
+    load(true) 
     fetch(url, {
         method: 'PATCH',
         body: data
-    }).then( () => document.location.href = `../table/${table}/`)
+    }).then( () => {
+        document.location.href = `../table/${table}/`
+        setTimeout(() => load(false), 1000)
+    })
 }
 
 document.querySelector('.save__btn').addEventListener('click', e => {

@@ -6,12 +6,15 @@ const URL = `http://${HOST}/post/create/${table}`
 const form = document.querySelector('.fields__wrapper')
 
 // Ajax запрос новых комментов
-function sendComment(data){    
+function sendComment(data){   
+    load(true) 
     fetch(URL, {
         method: 'POST',
         body: data
-    }).then( () => document.location.href = `../table/${table}/`)
-
+    }).then( () => {
+        document.location.href = `../table/${table}/`
+        setTimeout(() => load(false), 1000)
+    })
 }
 function checkFields(){
     let checked = true
