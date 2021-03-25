@@ -14,7 +14,7 @@ function deleteRecord(data){
         method: 'DELETE',
         body: data
     })
-    .then( () => document.location.href = `../table/${table}/`)
+    .then( () => document.location.href = `../table/film_comments/`)
 }
 document.querySelector('.delete__btn').addEventListener('click', e => {
     form.addEventListener('submit', e => {            
