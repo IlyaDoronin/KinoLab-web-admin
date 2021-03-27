@@ -26,7 +26,6 @@ function getFields(page){
         URL = `http://${HOST}/get/table/films_genres?page=${page}`
     if (table == 'genre')
         URL = `http://${HOST}/get/table/genres?page=${page}`        
-    console.log(URL);
     fetch(URL, { 
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
@@ -116,5 +115,3 @@ let btns = document.querySelectorAll('.object__page').forEach(btn => {
         getFields(this.innerHTML)
     })
 })  
-
-console.log(pageCount);
